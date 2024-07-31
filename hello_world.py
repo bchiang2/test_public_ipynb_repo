@@ -11,8 +11,7 @@ for i in range(5):
 # COMMAND ----------
 
 # MAGIC %environment
-# MAGIC "client": "1"
+# MAGIC "clasdfasdient": "1"
 # MAGIC "dependencies":
-# MAGIC - "reque  sts==2.26"
 # MAGIC - "requests==2.27.1"
 # MAGIC "base_environment": ""
