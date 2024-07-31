@@ -13,6 +13,6 @@ for i in range(5):
 # MAGIC %environment
 # MAGIC "client": "1"
 # MAGIC "dependencies":
-# MAGIC - "requests==2.26"
+# MAGIC - "reque  sts==2.26"
 # MAGIC - "requests==2.27.1"
 # MAGIC "base_environment": ""
