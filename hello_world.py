@@ -14,4 +14,5 @@ for i in range(5):
 # MAGIC "client": "1"
 # MAGIC "dependencies":
 # MAGIC - "requests"
+# MAGIC - "marshmallow"
 # MAGIC "base_environment": ""
