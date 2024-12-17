@@ -1,6 +1,63 @@
 {
+  "datasets" : [ {
+    "name" : "8998c411",
+    "displayName" : "audit",
+    "query" : "SELECT * FROM system.access.audit"
+  } ],
   "pages" : [ {
     "name" : "366b7363",
-    "displayName" : "Untitled page"
+    "displayName" : "First Page",
+    "layout" : [ {
+      "widget" : {
+        "name" : "44291de5",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "8998c411",
+            "fields" : [ {
+              "name" : "secondly(event_time)",
+              "expression" : "DATE_TRUNC(\"SECOND\", `event_time`)"
+            }, {
+              "name" : "count(*)",
+              "expression" : "COUNT(`*`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "bar",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "secondly(event_time)",
+              "scale" : {
+                "type" : "temporal"
+              },
+              "displayName" : "event_time"
+            },
+            "y" : {
+              "fieldName" : "count(*)",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Count of Records"
+            },
+            "label" : {
+              "show" : true
+            }
+          },
+          "frame" : {
+            "showDescription" : true,
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0,
+        "width" : 3,
+        "height" : 6
+      }
+    } ]
   } ]
 }
