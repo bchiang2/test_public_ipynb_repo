@@ -48,7 +48,11 @@
           },
           "frame" : {
             "showDescription" : true,
-            "showTitle" : true
+            "showTitle" : true,
+            "description" : ""
+          },
+          "mark" : {
+            "colors" : [ "#00A972", "#FFAB00", "#00A972", "#FF3621", "#8BCAE7", "#AB4057", "#99DDB4", "#FCA4A1", "#919191", "#BF7080" ]
           }
         }
       },
@@ -59,5 +63,11 @@
         "height" : 6
       }
     } ]
+  }, {
+    "name" : "3b3265db",
+    "displayName" : "Second Page"
+  }, {
+    "name" : "61c1e13b",
+    "displayName" : "Third Page"
   } ]
 }
