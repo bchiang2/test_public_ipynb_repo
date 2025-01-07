@@ -6,7 +6,7 @@
   } ],
   "pages" : [ {
     "name" : "366b7363",
-    "displayName" : "First Page",
+    "displayName" : "Audit",
     "layout" : [ {
       "widget" : {
         "name" : "44291de5",
@@ -65,9 +65,445 @@
     } ]
   }, {
     "name" : "3b3265db",
-    "displayName" : "Second Page"
+    "displayName" : "Events",
+    "layout" : [ {
+      "widget" : {
+        "name" : "883545b9",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "8998c411",
+            "fields" : [ {
+              "name" : "service_name",
+              "expression" : "`service_name`"
+            }, {
+              "name" : "count(event_id)",
+              "expression" : "COUNT(`event_id`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "bar",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "service_name",
+              "scale" : {
+                "type" : "categorical",
+                "sort" : {
+                  "by" : "y-reversed"
+                }
+              },
+              "displayName" : "service_name"
+            },
+            "y" : {
+              "fieldName" : "count(event_id)",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Count of event_id"
+            }
+          },
+          "frame" : {
+            "title" : "Number of events per service",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0,
+        "width" : 3,
+        "height" : 6
+      }
+    }, {
+      "widget" : {
+        "name" : "49e0b33c",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "8998c411",
+            "fields" : [ {
+              "name" : "workspace_id",
+              "expression" : "`workspace_id`"
+            } ],
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 1,
+          "widgetType" : "table",
+          "encodings" : {
+            "columns" : [ {
+              "fieldName" : "workspace_id",
+              "title" : "workspace_id",
+              "booleanValues" : [ "false", "true" ],
+              "type" : "string",
+              "displayAs" : "string",
+              "visible" : true,
+              "displayName" : "workspace_id"
+            } ]
+          },
+          "invisibleColumns" : [ {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "account_id",
+            "type" : "string",
+            "displayAs" : "string",
+            "order" : 100000,
+            "title" : "account_id",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "version",
+            "type" : "string",
+            "displayAs" : "string",
+            "order" : 100002,
+            "title" : "version",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "dateTimeFormat" : "DD/MM/YY HH:mm:ss.SSS",
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "event_time",
+            "type" : "datetime",
+            "displayAs" : "datetime",
+            "order" : 100003,
+            "title" : "event_time",
+            "allowSearch" : false,
+            "alignContent" : "right",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "dateTimeFormat" : "DD/MM/YY",
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "event_date",
+            "type" : "date",
+            "displayAs" : "datetime",
+            "order" : 100004,
+            "title" : "event_date",
+            "allowSearch" : false,
+            "alignContent" : "right",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "source_ip_address",
+            "type" : "string",
+            "displayAs" : "string",
+            "order" : 100005,
+            "title" : "source_ip_address",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "user_agent",
+            "type" : "string",
+            "displayAs" : "string",
+            "order" : 100006,
+            "title" : "user_agent",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "session_id",
+            "type" : "string",
+            "displayAs" : "string",
+            "order" : 100007,
+            "title" : "session_id",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "user_identity",
+            "type" : "complex",
+            "displayAs" : "json",
+            "order" : 100008,
+            "title" : "user_identity",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "service_name",
+            "type" : "string",
+            "displayAs" : "string",
+            "order" : 100009,
+            "title" : "service_name",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "action_name",
+            "type" : "string",
+            "displayAs" : "string",
+            "order" : 100010,
+            "title" : "action_name",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "request_id",
+            "type" : "string",
+            "displayAs" : "string",
+            "order" : 100011,
+            "title" : "request_id",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "request_params",
+            "type" : "complex",
+            "displayAs" : "json",
+            "order" : 100012,
+            "title" : "request_params",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "response",
+            "type" : "complex",
+            "displayAs" : "json",
+            "order" : 100013,
+            "title" : "response",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "audit_level",
+            "type" : "string",
+            "displayAs" : "string",
+            "order" : 100014,
+            "title" : "audit_level",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "event_id",
+            "type" : "string",
+            "displayAs" : "string",
+            "order" : 100015,
+            "title" : "event_id",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          }, {
+            "booleanValues" : [ "false", "true" ],
+            "imageUrlTemplate" : "{{ @ }}",
+            "imageTitleTemplate" : "{{ @ }}",
+            "imageWidth" : "",
+            "imageHeight" : "",
+            "linkUrlTemplate" : "{{ @ }}",
+            "linkTextTemplate" : "{{ @ }}",
+            "linkTitleTemplate" : "{{ @ }}",
+            "linkOpenInNewTab" : true,
+            "name" : "identity_metadata",
+            "type" : "complex",
+            "displayAs" : "json",
+            "order" : 100016,
+            "title" : "identity_metadata",
+            "allowSearch" : false,
+            "alignContent" : "left",
+            "allowHTML" : false,
+            "highlightLinks" : false,
+            "useMonospaceFont" : false,
+            "preserveWhitespace" : false
+          } ],
+          "allowHTMLByDefault" : false,
+          "itemsPerPage" : 25,
+          "paginationSize" : "default",
+          "condensed" : true,
+          "withRowNumber" : false,
+          "frame" : {
+            "title" : "Table of audit data",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 0,
+        "width" : 3,
+        "height" : 6
+      }
+    } ]
   }, {
     "name" : "61c1e13b",
-    "displayName" : "Third Page"
+    "displayName" : "Empty"
   } ]
 }
