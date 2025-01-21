@@ -1058,68 +1058,6 @@
       }
     } ]
   }, {
-    "name" : "61c1e13b",
-    "displayName" : "Assistance",
-    "layout" : [ {
-      "widget" : {
-        "name" : "0d18ecbc",
-        "queries" : [ {
-          "name" : "main_query",
-          "query" : {
-            "datasetName" : "089cf02e",
-            "fields" : [ {
-              "name" : "initiated_by",
-              "expression" : "`initiated_by`"
-            }, {
-              "name" : "count(event_id)",
-              "expression" : "COUNT(`event_id`)"
-            } ],
-            "disaggregated" : false
-          }
-        } ],
-        "spec" : {
-          "version" : 3,
-          "widgetType" : "bar",
-          "encodings" : {
-            "x" : {
-              "fieldName" : "initiated_by",
-              "scale" : {
-                "type" : "categorical",
-                "sort" : {
-                  "by" : "y-reversed"
-                }
-              },
-              "displayName" : "initiated_by"
-            },
-            "y" : {
-              "fieldName" : "count(event_id)",
-              "scale" : {
-                "type" : "quantitative"
-              },
-              "displayName" : "Count of event_id"
-            },
-            "label" : {
-              "show" : true
-            }
-          },
-          "frame" : {
-            "title" : "Number of events per user for the top 10 users",
-            "showTitle" : true,
-            "showDescription" : true
-          },
-          "mark" : {
-            "colors" : [ "#077A9D", "#FFAB00", "#00A972", "#FF3621", "#8BCAE7", "#AB4057", "#99DDB4", "#FCA4A1", "#919191", "#BF7080" ]
-          }
-        }
-      },
-      "position" : {
-        "x" : 0,
-        "y" : 0,
-        "width" : 4,
-        "height" : 11
-      }
-    } ]
-  }, {
     "name" : "1cc2964f",
     "displayName" : "Assistance 2"
   } ]
