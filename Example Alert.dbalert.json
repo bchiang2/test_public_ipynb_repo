@@ -1,5 +1,5 @@
 {
-  "query_text" : "select 1, 2, 3;",
+  "query_text" : "select 1, 2, 3, 4, 5;",
   "evaluation" : {
     "source" : {
       "name" : "1",
